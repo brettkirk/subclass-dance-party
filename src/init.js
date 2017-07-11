@@ -14,8 +14,8 @@ $(document).ready(function() {
      * one of the dancer maker functions available in global scope.
      * A new object of the given type will be created and added
      * to the stage.
-     */
-debugger;
+      */
+// debugger;
     var dancerMakerFunctionName = $(this).data('dancer-maker-function-name');
 
     // get the maker function for the kind of dancer we're supposed to make
@@ -24,12 +24,31 @@ debugger;
 
     // make a dancer with a random position 
     //debugger;
-    var dancer = new dancerMakerFunction(
-      $('body').height() * Math.random(),
-      $('body').width() * Math.random(),
-      Math.random() * 1000
-    );
-    $('body').append(dancer.$node);
+    if (dancerMakerFunctionName === 'makeBlinkyDancer') {
+      var dancer = new dancerMakerFunction(
+        $('body').height() * Math.random(),
+        $('body').width() * Math.random(),
+        Math.random() * 1000
+      );
+      $('body').append(dancer.$node);
+      //dancers.push(dancer.$node);
+    } else if (dancerMakerFunctionName === 'makeSupermanDancer') {
+      var superman = new dancerMakerFunction(
+        $('body').height() * Math.random(),
+        $('body').width() * Math.random(),
+        Math.random() * 1000
+      );
+      $('body').append(superman.$node);
+      //dancers.push(superman.$node);
+    } else if (dancerMakerFunctionName === 'makeExtraDancer') {
+      var extra = new dancerMakerFunction(
+        $('body').height() * Math.random(),
+        $('body').width() * Math.random(),
+        Math.random() * 1000
+      );
+      $('body').append(extra.$node);
+      //dancers.push(extra.$node);
+    }
   });
 });
 

@@ -21,12 +21,39 @@ body, a:link, a:visited, a:active{
   background-color: #777;
 }
 .dancer{
-  border:10px solid red;
-  border-radius:10px;
-  position:absolute;
+  border: 10px solid red;
+  border-radius: 10px;
+  position: absolute;
 }
 .superman{
-  border:10px solid blue;
-  border-radius:10px;
-  position:absolute;
+  border: 10px solid blue;
+  border-radius: 10px;
+  position: absolute;
+  animation-name: test;
+  animation-duration: 0s;
+  animation-iteration-count: infinite;
+}
+.extra{
+  border: 10px solid Green;
+  border-radius: 10px;
+  position: absolute;
+  animation-name: test2;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+
+/*I need to find a way to impliment a variable that is equal the left value of the current node... */
+@keyframes test {
+  /*var pos = (left);
+  0% {left: (left)px;}
+  50% {left: (left) + 100px;}
+  100% {left: (left);}*/
+  0% {left: 100px;}
+  50% {left: 600px;}
+  100% {left: 100px;}
+}
+@keyframes test2 {
+  0% {top: 0px;}
+  50% {top: 100px;}
+  100% {top: 0px;}
 }
