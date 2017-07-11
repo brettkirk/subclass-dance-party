@@ -16,5 +16,4 @@ makeExtraDancer.prototype.step = function(timeBetweenSteps) {
   //   $('.superman').css('radius', this.size);
   //   $('.superman').css('border-radius', this.size);
   // }
-  this.$node.css('color', 'green');
 };

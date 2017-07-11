@@ -12,7 +12,7 @@ makeSupermanDancer.prototype.step = function(timeBetweenSteps) {
   
   makeDancer.prototype.step.call(this);
 
-  $('.superman').css('animation-duration', '4s');
+  // $('.superman').css('animation-duration', '4s');
   // if ($('.superman').radius > 99) {
   //   this.size -= 5;
   //   $('.superman').css('radius', this.size);

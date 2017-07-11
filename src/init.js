@@ -19,7 +19,7 @@ $(document).ready(function() {
     var dancerMakerFunctionName = $(this).data('dancer-maker-function-name');
 
     // get the maker function for the kind of dancer we're supposed to make
-    //debugger;
+    // debugger;
     var dancerMakerFunction = window[dancerMakerFunctionName];
 
     // make a dancer with a random position 
@@ -31,7 +31,7 @@ $(document).ready(function() {
         Math.random() * 1000
       );
       $('body').append(dancer.$node);
-      //dancers.push(dancer.$node);
+      dancers.push(dancer.$node);
     } else if (dancerMakerFunctionName === 'makeSupermanDancer') {
       var superman = new dancerMakerFunction(
         $('body').height() * Math.random(),
@@ -39,7 +39,7 @@ $(document).ready(function() {
         Math.random() * 1000
       );
       $('body').append(superman.$node);
-      //dancers.push(superman.$node);
+      dancers.push(superman.$node);
     } else if (dancerMakerFunctionName === 'makeExtraDancer') {
       var extra = new dancerMakerFunction(
         $('body').height() * Math.random(),
@@ -47,7 +47,12 @@ $(document).ready(function() {
         Math.random() * 1000
       );
       $('body').append(extra.$node);
-      //dancers.push(extra.$node);
+      dancers.push(extra.$node);
+    } else if (dancerMakerFunctionName === 'doSomething') {
+      for (var i = 0; i < dancers.length; i++) {
+        window.dancers[i].css({left: $('body').width() * (i / dancers.length)});
+        window.dancers[i].css({top: $('body').height() * .5});
+      } 
     }
   });
 });
