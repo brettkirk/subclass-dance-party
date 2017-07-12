@@ -34,7 +34,6 @@ body, a:link, a:visited, a:active{
   height: 200px;
 }
 .superman{
-  
   position: absolute;
   animation-name: spin;
   animation-timing-function: linear;
@@ -50,7 +49,6 @@ body, a:link, a:visited, a:active{
   /*padding-left: 20px;*/ 
 }
 .superman:hover{
-  
   position: absolute;
   animation-name: spin2;
   animation-timing-function: linear;
@@ -63,7 +61,7 @@ body, a:link, a:visited, a:active{
   background-size: 100% 100%;
   width: 110px;
   height: 144px;
-  /*padding-left: 20px;*/ 
+  padding-left: 20px; 
 }
 .extra{
   position: absolute;
@@ -72,7 +70,7 @@ body, a:link, a:visited, a:active{
   animation-direction: alternate;
   animation-duration: 1s;
   animation-iteration-count: infinite;
-box-sizing: border-box;
+  box-sizing: border-box;
   background: url('./src/img/Chun-Li_tatsunoko.png');
   display: block;
   background-size: 100% 100%;
@@ -86,7 +84,7 @@ box-sizing: border-box;
   animation-direction: alternate;
   animation-duration: 1s;
   animation-iteration-count: infinite;
-box-sizing: border-box;
+  box-sizing: border-box;
   background: url('./src/img/Chun-Li_tatsunoko.png');
   display: block;
   background-size: 100% 100%;
@@ -113,5 +111,20 @@ box-sizing: border-box;
 @keyframes grow2 {
   0% {transform: translate(0px, -100px);}
   50% {transform: scale(0.5);}
+  100% {transform: translate(0px, 100px);}
+}
+@keyframes 1 {
+  0% {transform: translate(-100px);}
+  50% {transform: scale(5);}
+  100% {transform: translate(100px);}
+}
+@keyframes 2 {
+  0% {transform: translate(0px, -100px);}
+  50% {transform: scale(5);}
+  100% {transform: translate(0px, 100px);}
+}
+@keyframes 3 {
+  0% {transform: translate(0px, -100px);}
+  50% {transform: scale(5 );}
   100% {transform: translate(0px, 100px);}
 }
